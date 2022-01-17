@@ -3,7 +3,7 @@
 Plugin Name: Coffer
 Plugin URI: https://tylerjohnsondesign.com
 Description: A simple, Stripe donation plugin.
-Version: 1.0.0
+Version: 1.0.1
 Author: Tyler Johnson
 Author URI: https://tylerjohnsondesign.com
 Copyright: Tyler Johnson
@@ -19,7 +19,7 @@ if( !defined( 'WPINC' ) ) { die; }
 /**
  * Constants
  */
-define( 'COFFER_VERSION', '1.0.0' );
+define( 'COFFER_VERSION', '1.0.1' );
 define( 'COFFER_PATH', trailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'COFFER_URI', trailingslashit( plugin_dir_url( __FILE__ ) ) );
 

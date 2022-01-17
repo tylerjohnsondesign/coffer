@@ -1,7 +1,7 @@
 /* coffer.css */
 .StripeElement {
     margin: 10px 0 20px 0;
-    max-width: 500px;
+    max-width: 100%;
     max-height: 40px;
     padding: 10px 14px;
     font-size: 18px;
@@ -137,4 +137,25 @@ input#coffer-option-custom {
 span.coffer-option-other-label {
     font-weight: bold;
     margin-right: 5px;
+}
+
+.coffer-head h2 {
+    margin: 0 0 15px 0;
+}
+
+@media screen and (max-width: 767px) {
+
+    .coffer-option-other-btn {
+        min-width: 100%;
+        margin-top: 10px;
+    }
+    
+    .coffer-options {
+        flex-wrap: wrap;
+    }
+    
+    .coffer-option:nth-child(4) {
+        margin-right: 0;
+    }
+
 }

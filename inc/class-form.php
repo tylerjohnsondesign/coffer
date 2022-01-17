@@ -116,7 +116,7 @@ class cofferForm {
                             // Check for other.
                             if( !empty( $settings->get_option( 'box-other' ) ) && $settings->get_option( 'box-other' ) == 'on' ) { ?>
 
-                                <div class="coffer-option">
+                                <div class="coffer-option coffer-option-other-btn">
                                     <span id="coffer-open" data-id="coffer-option-other">Other</span>
                                 </div><?php
 
@@ -163,14 +163,31 @@ class cofferForm {
 
             // Set colors.
             $primary    = ( !empty( $settings->get_option( 'primary-color' ) ) ) ? $settings->get_option( 'primary-color' ) : '#0c5aa6';
-            $secondary  = ( !empty( $settings->get_option( 'secondary-color' ) ) ) ? $settings->get_option( 'secondary-color' ) : '#03294d'; ?>
+            $secondary  = ( !empty( $settings->get_option( 'secondary-color' ) ) ) ? $settings->get_option( 'secondary-color' ) : '#03294d';
+            $text_color = ( !empty( $settings->get_option( 'text-color' ) ) ) ? $settings->get_option( 'text-color' ) : '#000';
+            $box_color  = ( !empty( $settings->get_option( 'box-color' ) ) ) ? $settings->get_option( 'box-color' ) : '#fff'; ?>
+
+            .coffer-box {
+                background: <?php echo $box_color; ?> !important;
+            }
+
+            .coffer-box h2, .coffer-box p, .coffer-option span, span.coffer-option-other-label {
+                color: <?php echo $text_color; ?>;
+            } 
 
             .coffer-option {
                 background: <?php echo $secondary; ?>;
             }
 
             .coffer-option.active, .coffer-panel button#submit, div#coffer-option-other button.coffer-btn {
-                background: <?php echo $primary; ?>;
+                background: <?php echo $primary; ?> !important;
+                box-shadow: none !important;
+                font-size: 16px !important;
+                font-weight: normal !important;
+            }
+
+            div#coffer-option-other button.coffer-btn {
+                padding: 5px;
             }
 
             div#coffer-option-other button.coffer-btn {

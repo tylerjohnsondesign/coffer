@@ -38,6 +38,8 @@ class cofferSettings {
             'box-other'         => '',
             'primary-color'     => '',
             'secondary-color'   => '',
+            'text-color'        => '',
+            'box-color'         => '',
             'success-message'   => '',
         ];
 
@@ -76,7 +78,7 @@ class cofferSettings {
         $options = $this->get_options();
 
         // Return.
-        return $options[$id];
+        return ( isset( $options[$id] ) ) ? $options[$id] : false;
 
     }
 
@@ -161,6 +163,20 @@ class cofferSettings {
                 'type'              => 'text',
                 'label'             => 'Secondary Color',
                 'description'       => 'The secondary color for the donation box.',
+                'options'           => [],
+                'class'             => 'coffer-color',
+            ],
+            'text-color'   => [
+                'type'              => 'text',
+                'label'             => 'Text Color',
+                'description'       => 'The text color for the donation box.',
+                'options'           => [],
+                'class'             => 'coffer-color',
+            ],
+            'box-color'   => [
+                'type'              => 'text',
+                'label'             => 'Box Color',
+                'description'       => 'The background color for the donation box.',
                 'options'           => [],
                 'class'             => 'coffer-color',
             ],
